@@ -49,16 +49,14 @@ public class ProductController {
     @PutMapping("{id}")
     public ResponseEntity<Product> replaceProduct(@PathVariable long id, @Validated @RequestBody Product product) {
         int index = -1;
-        System.out.println("id"+ id);
         for(Product product1: products) {
-            ;
             if(product1.getId() == id) {
                 index = products.indexOf(product1);
             }
         }
         if(index != -1) {
             products.set(index, product);
-            return ResponseEntity.accepted().body(product);
+            return ResponseEntity.ok().body(product);
         } else {
             return ResponseEntity.notFound().build();
         }
