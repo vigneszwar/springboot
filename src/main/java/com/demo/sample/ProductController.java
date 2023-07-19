@@ -4,9 +4,11 @@ import com.demo.sample.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -42,6 +44,29 @@ public class ProductController {
         Product newProduct = new Product(products.size()+1, product.getName(), product.getDescription(), product.getPrice());
         products.add(newProduct);
         return ResponseEntity.created(URI.create("/products/"+newProduct.getId())).body(newProduct);
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<Product> replaceProduct(@PathVariable long id, @Validated @RequestBody Product product) {
+        int index = -1;
+        System.out.println("id"+ id);
+        for(Product product1: products) {
+            ;
+            if(product1.getId() == id) {
+                index = products.indexOf(product1);
+            }
+        }
+        if(index != -1) {
+            products.set(index, product);
+            return ResponseEntity.accepted().body(product);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+    @DeleteMapping("{id}")
+    public ResponseEntity<Product> deleteProduct(@PathVariable long id) {
+        //write logic for delete
+        return ResponseEntity.status(204).body(null);
     }
 
 }
