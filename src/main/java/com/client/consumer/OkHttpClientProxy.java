@@ -1,7 +1,7 @@
 package com.client.consumer;
 
 
-import com.demo.sample.model.Product;
+import com.demo.sample.backend.model.Product;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

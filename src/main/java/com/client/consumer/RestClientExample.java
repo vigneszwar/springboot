@@ -1,6 +1,6 @@
 package com.client.consumer;
 
-import com.demo.sample.model.Product;
+import com.demo.sample.backend.model.Product;
 
 import java.io.IOException;
 
