@@ -40,7 +40,7 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@Validated @RequestBody Product product) {
-        Product newProduct = Product.builder().id(products.size()+1).name(product.getName()).description(product.getDescription()).price(product.getPrice()).build();
+        Product newProduct = Product.builder().id(products.size()+1).name(product.getName()).description(product.getDescription()).price(product.getPrice()).imageUrl(product.getImageUrl()).build();
         products.add(newProduct);
         return ResponseEntity.created(URI.create("/products/"+newProduct.getId())).body(newProduct);
     }
