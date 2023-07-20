@@ -1,4 +1,3 @@
-<!-- products.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -20,7 +19,7 @@
     <td th:text="${product.id}"></td>
     <td th:text="${product.name}"></td>
     <td th:text="${product.description}"></td>
-    <td th:text="${product.price}"></td>
+    <td>Rs.<span th:text="${product.price}"></span></td>
     <td><a th:href="@{/products/{id}(id=${product.id})}">View Details</a></td>
   </tr>
   </tbody>

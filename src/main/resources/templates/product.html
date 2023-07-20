@@ -1,4 +1,3 @@
-<!-- product.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -6,8 +5,19 @@
 </head>
 <body>
 <h1 th:text="${product.name}">Product Name</h1>
-<p th:text="${product.description}">Description</p>
-<p th:text="${product.price}">Price</p>
-<img th:src="${product.imageUrl}"  alt="Product Image"/>
+<div>
+    <img th:src="${product.imageUrl}" alt="Product Image" style="max-width: 300px;"/>
+</div>
+<div>
+    <strong>Description:</strong>
+    <p th:text="${product.description}">Description</p>
+</div>
+<div>
+    <strong>Price:</strong>
+    <p> Rs.<span th:text="${product.price}"/></p>
+</div>
+<div>
+    <a th:href="@{/products}">Back to Products</a>
+</div>
 </body>
 </html>

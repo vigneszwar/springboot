@@ -27,7 +27,7 @@ public class DemoConfiguration {
     @Bean
     public ArrayList<Product> getProducts() {
         ArrayList<Product> products = new ArrayList<>();
-        products.add(Product.builder().id(1).name("Samsung NEO QLED TV").description("55 inch 2022 model").price(150000).imageUrl("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgc-ftuJAO-3ub0u6LVUMX5a0lbPzlFVqgOC-zK_2AODYQ6VcAXvCd5cmCbPnKaKXJFmY&usqp=CAU").build());
+        products.add(Product.builder().id(1).name("Samsung NEO QLED TV").description("55 inch 2022 model").price(150000).imageUrl("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0lZLHGS5Lo-tBrPgAhhs2b_vi78bYMbUoqw&usqp=CAU").build());
         products.add(Product.builder().id(2).name("LG Front Door Washing Machine").description("9kg 5 star model").price(150000).imageUrl("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzXYd9QG494vqNiVwO6T2p--Uk-0UXnyq1TwivXZ-oVA&s").build());
         return products;
     }
