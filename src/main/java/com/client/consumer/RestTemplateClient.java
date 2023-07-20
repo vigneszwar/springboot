@@ -7,14 +7,14 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class RestTemplateClient {
+    RestTemplate restTemplate = new RestTemplate();
 
+    public void addProduct(Product product) {
+        restTemplate.postForObject("http://localhost:8081/api/products",product, Product.class);
+    }
 
-    public void addProduct() {
-        RestTemplate restTemplate = new RestTemplate();
-        Product product = Product.builder().name("Redmi Note 12 pro").description("12GB RAM 256GB Storage").price(23000)
-            .imageUrl("https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSh5o9OjxFdIZHRaRWbupmtCSpxEQFOqZULdDAeCy-Y56qUbVz9F1hyrk2lcOe_HGMfmXglEnfDteuSDaqPg_hbjVjrnnoEXnYPYrgbO2vYFD_d7EB6C_Td&usqp=CAc")
-                        .build();
-        restTemplate.postForObject("http://localhost:8080/api/products",product, Product.class);
+    public void deleteProduct(long id) {
+        restTemplate.delete("http://localhost:8081/api/products/" + id);
     }
 
 

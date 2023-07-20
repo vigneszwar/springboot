@@ -12,14 +12,6 @@ import java.util.ArrayList;
 @Configuration
 @EnableWebMvc
 public class DemoConfiguration {
-
-//    @Value("${resource.name}")
-//    private String resourceName;
-
-//    public String getResourceName() {
-//        return resourceName;
-//    }
-
     @Bean
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
