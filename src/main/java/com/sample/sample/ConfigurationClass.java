@@ -8,7 +8,7 @@ import java.util.ArrayList;
 @Configuration
 public class ConfigurationClass {
     @Bean
-    // get numbers for change
+    // get number is function
     public ArrayList<Integer> getNumbers() {
         System.out.println("Creating ArrayList Numbers object");
         ArrayList<Integer> objects = new ArrayList<>();
