@@ -9,7 +9,7 @@ import java.util.ArrayList;
 // component for greet class
 @Component
 public class GreetClass {
-
+//change by Aswin M M
 
     @Autowired
     public ArrayList<Integer> numbers;
