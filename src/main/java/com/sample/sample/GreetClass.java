@@ -10,7 +10,7 @@ import java.util.ArrayList;
 //This class is for componenet named greetclass
 @Component
 public class GreetClass {
-
+///akasian
 
     @Autowired
     public ArrayList<Integer> numbers;
