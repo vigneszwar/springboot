@@ -22,7 +22,7 @@ public class GreetClass {
         return numbers;
     }
     public String greet(String name) {
-        return "Hello " + name;
+        return "HI " + name;
     }
 
 
