@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 
 // component for greet class
+//This class is for componenet name greetclass
 @Component
 public class GreetClass {
 
