@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
-
+//ramesh
 // component for greet class
 //This class is for componenet named greetclass
 @Component
