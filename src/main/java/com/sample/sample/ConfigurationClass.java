@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
-
+//new line
 @Configuration
 public class ConfigurationClass {
     @Bean
