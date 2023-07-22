@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
+//component class
 @Component
 public class GreetClass {
 
