@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Component
 public class GreetClass {
 
-
+//comp
     @Autowired
     public ArrayList<Integer> numbers;
 
