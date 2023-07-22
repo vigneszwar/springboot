@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class GreetClass {
 
 
+    @Autowired
     public ArrayList<Integer> numbers;
 
     public GreetClass() {
