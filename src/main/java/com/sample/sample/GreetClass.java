@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 // component for greet class
 //hgjgjh
+//qwertyu
 @Component
 public class GreetClass {
 
